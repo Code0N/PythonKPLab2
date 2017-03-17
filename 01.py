@@ -8,7 +8,7 @@ if exists(argv[1]) == False:
 	print('Файл не существует')
 	exit()
 	
-file = open(argv[1], 'rt')
+file = open(argv[1], 'rt', 512, 'utf-8')
 alltextfiltered = ''
 for line in file:
 	for i in line:
@@ -16,7 +16,7 @@ for line in file:
 			alltextfiltered += i #Because Duke say's Fuck you optimization
 
 letters = 'qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмитьбю'.upper() #Не будем заморачиваться
-alltextfiltered.upper()
+alltextfiltered = alltextfiltered.upper()
 
 for i in letters:
 	numcount = alltextfiltered.count(i)
