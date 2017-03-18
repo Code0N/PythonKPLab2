@@ -12,7 +12,8 @@ def parse_arguments(args=None):
 pathtowork = parse_arguments(argv[1:])
 
 def compare_files(path):
-	listOfDir = os.listdir(path)
+	dir_iterator = os.walk(path)
+	
 	
 
 if not os.path.exists(pathtowork):
