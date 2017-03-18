@@ -14,6 +14,7 @@ for line in file:
 	for i in line:
 		if i.isalpha():
 			alltextfiltered += i #Because Duke say's Fuck you optimization
+file.close()
 
 letters = 'qwertyuiopasdfghjklzxcvbnmйцукенгшщзхъфывапролджэячсмитьбю'.upper() #Не будем заморачиваться
 alltextfiltered = alltextfiltered.upper()
