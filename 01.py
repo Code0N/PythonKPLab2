@@ -23,7 +23,7 @@ resultstring = ''
 for i in letters:
 	numcount = alltextfiltered.count(i)
 	if numcount != 0:
-		#print("Буква {} встречается в тексте {} раз".format(i, numcount))
-		resultstring += ' |{} : {}|\n '.format(i, numcount)
+		print("Буква {} встречается в тексте {} раз".format(i, numcount))
+		#resultstring += ' |{} : {}|\n '.format(i, numcount)
 
-print(resultstring)
+#print(resultstring)
