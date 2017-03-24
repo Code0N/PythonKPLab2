@@ -11,7 +11,13 @@ if not os.path.isdir(argv[1]):
 	print('Папка не является папкой')
 	exit()
 
-file = open(os.path.join(argv[1], 'list.txt'), 'rt')
+try:
+	file = open(os.path.join(argv[1], 'list.txt'), 'rt')
+except:
+	print('Возник exception')
+finally:
+	file.close()
+
 nameslist = file.read().splitlines()
 
 listdir = os.listdir(argv[1])

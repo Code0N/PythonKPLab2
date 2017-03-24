@@ -8,7 +8,13 @@ if exists(argv[1]) == False:
 	print('Файл не существует')
 	exit()
 	
-file = open(argv[1], 'rt', 512, 'utf-8')
+try:
+	file = open(argv[1], 'rt', 512, 'utf-8')
+except:
+	print('Эксепшн')
+finally:
+	file.close()
+
 alltextfiltered = ''
 for line in file:
 	for i in line:

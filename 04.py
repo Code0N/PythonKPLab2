@@ -7,9 +7,12 @@ if not exists(pathtofile):
 	print('Файла не существует')
 if not isfile(pathtofile):
 	print('Файл - не файл')
-	
-file = open(pathtofile, 'rt')
-strings = file.readlines()
+try:
+	file = open(pathtofile, 'rt')
+except:
+	print('Ой, эксепшн')
+finally:
+	strings = file.readlines()
 
 for i in range(len(strings)):
 	result = re.findall(':..?\)+', strings[i]) #Чёрная магия
