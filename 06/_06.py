@@ -6,7 +6,7 @@ import argparse
 
 def check_arguments(args=None):
     parser = argparse.ArgumentParser(description="Reorganizer")
-    parser.add_argument('-D', '--days', help='How much older files should be', default='01.01.1997')
+    parser.add_argument('-D', '--days', help='How much older files should be', default='5')
     parser.add_argument('-S', '--source', help='Path to folder', required='True')
     parser.add_argument('-R', '--size', help='Size of files in KB', default='10')
     parsed = parser.parse_args(args)
